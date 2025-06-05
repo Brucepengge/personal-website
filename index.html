@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人主页</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- 照片轮播区 -->
+  <section class="slideshow">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('images/photo1.jpg');">
+        <div class="slide-content">
+          <h1>王贝柠</h1>
+          <p>摄影师 & 设计师</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('images/photo2.jpg');">
+        <div class="slide-content">
+          <h1>王贝柠</h1>
+          <p>旅行爱好者</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('images/photo3.jpg');">
+        <div class="slide-content">
+          <h1>王贝柠</h1>
+          <p>创意探索者</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 导航箭头 -->
+    <button class="arrow prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="arrow next"><i class="fas fa-chevron-right"></i></button>
+    
+    <!-- 指示点 -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- 过渡区 -->
+  <section class="transition">
+    <div class="wave"></div>
+    <p class="quote">" 用镜头捕捉生活的美好 "</p>
+  </section>
+
+  <!-- 社交媒体区 -->
+  <footer class="social-links">
+    <a href="#" class="social-icon wechat" title="微信">
+      <i class="fab fa-weixin"></i>
+    </a>
+    <a href="#" class="social-icon weibo" title="微博">
+      <i class="fab fa-weibo"></i>
+    </a>
+    <a href="https://space.bilibili.com/385670211?spm_id_from=333.337.search-card.all.click" class="social-icon bilibili" title="哔哩哔哩">
+      <svg viewBox="0 0 24 24" class="icon-bilibili"><path fill="currentColor" d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906L17.813 4.653zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773H5.333zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg>
+    </a>
+    <a href="#" class="social-icon instagram" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="social-icon linkedin" title="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" class="social-icon github" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="#" class="social-icon email" title="邮箱">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

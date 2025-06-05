@@ -1,0 +1,218 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* 照片轮播区样式 */
+.slideshow {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.slides {
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.slide-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slide-content p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 导航箭头样式 */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.prev {
+  left: 2rem;
+}
+
+.next {
+  right: 2rem;
+}
+
+/* 指示点样式 */
+.dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* 过渡区样式 */
+.transition {
+  position: relative;
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, #1a1a1a, #2a2a2a);
+  text-align: center;
+}
+
+.wave {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url('data:image/svg+xml,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231a1a1a"/></svg>') repeat-x;
+  background-size: 1200px 100%;
+  transform: rotate(180deg);
+}
+
+.quote {
+  color: white;
+  font-size: 2rem;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 社交媒体链接样式 */
+.social-links {
+  padding: 3rem 0;
+  background: #2a2a2a;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-bilibili {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+}
+
+.wechat:hover { color: #7bb32e; }
+.weibo:hover { color: #e6162d; }
+.bilibili:hover { color: #00a1d6; }
+.instagram:hover { color: #e4405f; }
+.linkedin:hover { color: #0077b5; }
+.github:hover { color: #6e5494; }
+.email:hover { color: #ea4335; }
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .slide-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .slide-content p {
+    font-size: 1.2rem;
+  }
+
+  .arrow {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .social-links {
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+  }
+} 
